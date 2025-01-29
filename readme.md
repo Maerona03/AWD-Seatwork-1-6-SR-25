@@ -4,8 +4,7 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/zyx-0314/">
-  
+  <a href="https://github.com/Maerona03/">
     <img src="./assets/img/SERO.png" alt="sero" width="130" height="100">
   </a>
 
@@ -22,6 +21,7 @@
 ![](https://visit-counter.vercel.app/counter.png?page=Maerona03/AWD-Seatwork-1-6-SR-25)
 
 [![wakatime](https://wakatime.com/badge/user/018f030b-8e47-42e2-9e2a-52b75c89a316/project/cb55182a-f400-43c5-a7c1-ee527655cb9f.svg)](https://wakatime.com/badge/user/018f030b-8e47-42e2-9e2a-52b75c89a316/project/cb55182a-f400-43c5-a7c1-ee527655cb9f)
+
 
 
 
