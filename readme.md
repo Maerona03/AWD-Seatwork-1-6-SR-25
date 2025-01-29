@@ -5,24 +5,25 @@
 <br />
 <div align="center">
   <a href="https://github.com/zyx-0314/">
-  <!-- TODO: If you want to add logo or banner you can add it here -->
-    <img src="./assets/img/nyebe_white.png" alt="Nyebe" width="130" height="100">
+  
+    <img src="./assets/img/SERO.png" alt="sero" width="130" height="100">
   </a>
-<!-- TODO: Change Title to the name of the title of your Project -->
-  <h3 align="center">Title</h3>
+
+  <h3 align="center">Grade Management</h3>
 </div>
-<!-- TODO: Make a short description -->
+
 <div align="center">
-  Short Description. (Optional)
+  A simple student Grade Calculator allows students to input their grades for each subject and automatically calculates the overall average. This tool helps students easily track their performance across different subjects and get a clear view of their general average.
 </div>
 
 <br />
 
-<!-- TODO: Change the zyx-0314 into your github username  -->
-<!-- TODO: Change the WD-Template-Project into the same name of your folder -->
-![](https://visit-counter.vercel.app/counter.png?page=zyx-0314/WD-Template-Project)
 
-[![wakatime](https://wakatime.com/badge/user/018dd99a-4985-4f98-8216-6ca6fe2ce0f8/project/63501637-9a31-42f0-960d-4d0ab47977f8.svg)](https://wakatime.com/badge/user/018dd99a-4985-4f98-8216-6ca6fe2ce0f8/project/63501637-9a31-42f0-960d-4d0ab47977f8)
+![](https://visit-counter.vercel.app/counter.png?page=Maerona03/AWD-Seatwork-1-6-SR-25)
+
+[![wakatime](https://wakatime.com/badge/user/018f030b-8e47-42e2-9e2a-52b75c89a316/project/cb55182a-f400-43c5-a7c1-ee527655cb9f.svg)](https://wakatime.com/badge/user/018f030b-8e47-42e2-9e2a-52b75c89a316/project/cb55182a-f400-43c5-a7c1-ee527655cb9f)
+
+
 
 ---
 
@@ -63,7 +64,9 @@ Description of the project in details.
 
 Guiding Question:
 - What is the project
+     This project is a student grade calculator where in it can enter student name and input five grade to get the total grade average.
 - Whats the purpose
+     To help students efficiently track and manage their grades across different subjects. This  provides a quick and accurate way to monitor academic performance, allowing students to identify areas for improvement and stay on top of their grades throughout the semester.
 - What are key components
 - What technology used and how it is used
 
@@ -119,4 +122,4 @@ WD-ProjectName
 <!-- TODO: Add References -->
 | Title | Purpose | Link |
 |-|-|-|
-| Sample Title | Sample purpose would be here like this and this is the example of what it is. | trykolang.com |
+| Canva | Background and logo. | https://www.canva.com/design/DAGditiSiC8/ts7JeDqFsFdyZaesJX1Nqg/edit  |
