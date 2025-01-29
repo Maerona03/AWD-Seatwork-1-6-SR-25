@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <link rel="stylesheet" href="../page1/assets/css/style.css">
+</head>
+<body>
+    <div class="head-container">
+        <div class="navigation">
+          <a href="../../index.html" class="btn-home">Back</a>
+        </div>
+    
+        <section class="main-container">
+            <!-- Form Section -->
+            <div class="form-section">
+                <div class="form-container">
+                    <div class="input-group">
+                        <label for="studentName">Student Name</label>
+                        <input type="text" id="studentName" placeholder="Enter your name">
+                    </div>
+    
+                    <div class="input-group">
+                        <label for="DesignThinking">Design Thinking</label>
+                        <input type="number" id="DesignThinking" placeholder="Enter grade (0-100)">
+                    </div>
+                    <div class="input-group">
+                        <label for="Computer">Computer Programming</label>
+                        <input type="number" id="Computer" placeholder="Enter grade (0-100)">
+                    </div>
+                    <div class="input-group">
+                        <label for="Networking">Networking 2</label>
+                        <input type="number" id="Networking" placeholder="Enter grade (0-100)">
+                    </div>
+                    <div class="input-group">
+                        <label for="AdvanceWeb">Advance Web Design</label>
+                        <input type="number" id="AdvanceWeb" placeholder="Enter grade (0-100)">
+                    </div>
+                    <div class="input-group">
+                        <label for="Database">Database Systems</label>
+                        <input type="number" id="Database" placeholder="Enter grade (0-100)">
+                    </div>
+    
+                    <div class="button-group">
+                        <button type="button" class="btn" onclick="total()">Total</button>
+                        <button type="button" class="btn" onclick="average()">Average</button>
+                        <button type="button" class="btn" onclick="grade()">Grade</button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Results Section -->
+            <div class="results-section">
+                <h2>Result:</h2>
+                <p id="student-name-result"></p>
+                <p id="total-result"></p>
+                <p id="average-result"></p>
+                <p id="grade-result"></p>
+            </div>
+        </section>
+    
+        
+    
+    </div>
+    <script src="../page1/assets/js/scripts.js"></script>
+</body>
+</html>
