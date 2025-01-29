@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.head-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/mathblue.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  gap: 1rem;
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+.title {
+  font-size: 5rem;
+  letter-spacing: 0.1rem;
+  color: #F5EFE7;
+}
+
+
+.description {
+  letter-spacing: 0.1rem;
+  color: #F5EFE7;
+  padding-top: 1rem;
+}
+
+.btn {
+  background: #213555;
+  color: #F5EFE7;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.301);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-size: 1.2rem;
+  border: 2px solid rgba(255, 255, 255, 0.212);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-weight: 700;
+  text-decoration: none;
+  overflow: hidden;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: #617ca0;
+    color: #fffffd;
+    transform: translateY(-3px);
+  }
+
+
+}
