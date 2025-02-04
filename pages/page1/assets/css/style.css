@@ -36,7 +36,7 @@ body {
     border-radius: 3px;
     font-weight: 700;
     text-decoration: none;
-    color: var(--color-primary-1);
+    color: white;
     overflow: hidden;
     transition: all 0.2s ease;
   
@@ -61,136 +61,113 @@ body {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Main Container for Form and Results */
+/* Main Container */
 .main-container {
-    display: flex;
-    align-items: flex-start;
-    padding-top: 30px;
-    gap: 30px; /* Space between the form and results */
-    flex-wrap: wrap;
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* Form Section */
 .form-section {
-    padding-left: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 100%;
-    max-width: 500px;
-}
-
-.form-container {
-    width: 100%;
     padding: 20px;
-    border-radius: 10px;
     
 }
 
 .input-group {
-    margin: 15px 0;
-    text-align: left;
-    width: 100%;
+    margin-bottom: 20px;
 }
 
-label {
-    letter-spacing: 0.1rem;
-    font-size: 1rem;
-    color: white;
+.input-group label {
+    font-weight: bold;
+    display: block;
     margin-bottom: 5px;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    outline: none;
-    transition: border-color 0.3s;
-}
-
-input:focus {
-    border-color: #4A148C;
-}
-
-/* Buttons */
-.button-group {
-    margin: 20px 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-.btn-home{
-    background: #213555;
-    color: #F5EFE7;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.301);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    font-size: 1.2rem;
-    border: 2px solid rgba(255, 255, 255, 0.212);
-    padding: 0.2rem 0.5rem;
-    border-radius: 3px;
-    font-weight: 700;
-    text-decoration: none;
-    overflow: hidden;
-    transition: all 0.2s ease;
-  
-    &:hover {
-      background-color: #3E5879;
-      color: #fffffd;
-      transform: translateY(-3px);
-    }
-}
-.btn {
-    background: #213555;
-    color: #F5EFE7;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.301);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    font-size: 1.2rem;
-    border: 2px solid rgba(255, 255, 255, 0.212);
-    padding: 0.2rem 0.5rem;
-    border-radius: 3px;
-    font-weight: 700;
-    text-decoration: none;
-    overflow: hidden;
-    transition: all 0.2s ease;
-  
-    &:hover {
-      background-color: #3E5879;
-      color: #fffffd;
-      transform: translateY(-3px);
-    }
-  }
-
-/* Results Section */
-.results-section {
-    width: 100%;
-    max-width: 500px;
-    padding: 20px 10px;
-    border-radius: 10px;;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 20px;
-}
-
-.results-section h2 {
     color: white;
+    font-size: 1.2rem;
     letter-spacing: 0.1rem;
-    font-size: 2rem;
-    margin-bottom: 15px;
     font-family: 'Poppins', sans-serif;
 }
 
-.results-section p {
-    font-size: 1.2rem;
-    margin: 10px 0;
-    color: #c7e4ff;
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
+
+.button-group {
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #384970;
+}
+
+
+
+/* Results Section */
+.results-section {
+    margin-top: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.results-section h2{
+    color: #000000;
+}
+
+h2 {
+    color: #ffffff;
+}
+
+/* Table Section */
+.records-section {
+    margin-top: 40px;
+    background-color: #213555;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #213555;
+    font-family: 'Poppins', sans-serif;
+}
+
+table th {
+    background-color: #0d1b37;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
 
 
 

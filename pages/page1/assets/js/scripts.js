@@ -1,78 +1,45 @@
-// Function to calculate total marks and store data
-function total() {
+// Function to calculate GWA and display results
+function calculate() {
     let name = document.getElementById("studentName").value.trim();
+
+    // Get grades
     let sub1 = parseInt(document.getElementById("DesignThinking").value) || 0;
     let sub2 = parseInt(document.getElementById("Computer").value) || 0;
     let sub3 = parseInt(document.getElementById("Networking").value) || 0;
     let sub4 = parseInt(document.getElementById("AdvanceWeb").value) || 0;
     let sub5 = parseInt(document.getElementById("Database").value) || 0;
 
+    // Get units
+    let units1 = parseInt(document.getElementById("DesignThinkingUnits").value) || 0;
+    let units2 = parseInt(document.getElementById("ComputerUnits").value) || 0;
+    let units3 = parseInt(document.getElementById("NetworkingUnits").value) || 0;
+    let units4 = parseInt(document.getElementById("AdvanceWebUnits").value) || 0;
+    let units5 = parseInt(document.getElementById("DatabaseUnits").value) || 0;
+
     if (!name) {
         alert("Please enter the student's name.");
         return;
     }
 
-    if ([sub1, sub2, sub3, sub4, sub5].some(score => score > 100 || score < 0)) {
-        alert("Invalid Input! Enter values between 0 and 100.");
+    if ([sub1, sub2, sub3, sub4, sub5].some(score => score > 100 || score < 0) ||
+        [units1, units2, units3, units4, units5].some(unit => unit < 1 || unit > 5)) {
+        alert("Invalid Input! Enter values between 0 and 100 for grades, and 1 to 5 for units.");
         return;
     }
 
-    let totalMarks = sub1 + sub2 + sub3 + sub4 + sub5;
+    // Calculate total weighted score
+    let totalUnits = units1 + units2 + units3 + units4 + units5;
+    let weightedTotal = (sub1 * units1) + (sub2 * units2) + (sub3 * units3) + (sub4 * units4) + (sub5 * units5);
 
-    // Display results for total only
+    // Calculate GWA (General Weighted Average)
+    let gwa = (weightedTotal / totalUnits).toFixed(2);
+
+    // Display results
     document.getElementById("student-name-result").innerHTML = `Student: ${name}`;
-    document.getElementById("total-result").innerHTML = `Total: ${totalMarks}`;
+    document.getElementById("gwa-result").innerHTML = `GWA: ${gwa}`;
 
-    // Save student data (without average and grade)
-    saveStudentRecord({ name, sub1, sub2, sub3, sub4, sub5, totalMarks, averageMarks: null, grade: null });
-}
-
-// Function to calculate and display average
-function average() {
-    let students = JSON.parse(localStorage.getItem("students")) || [];
-    let lastStudent = students[students.length - 1]; // Get the latest entry
-
-    if (!lastStudent) {
-        alert("No data found! Please calculate total first.");
-        return;
-    }
-
-    let averageMarks = (lastStudent.totalMarks / 5).toFixed(2);
-    document.getElementById("average-result").innerHTML = `Average: ${averageMarks}`;
-
-    // Update the stored data
-    lastStudent.averageMarks = averageMarks;
-    students[students.length - 1] = lastStudent;
-    localStorage.setItem("students", JSON.stringify(students));
-}
-
-// Function to calculate and display grade
-function grade() {
-    let students = JSON.parse(localStorage.getItem("students")) || [];
-    let lastStudent = students[students.length - 1];
-
-    if (!lastStudent || lastStudent.averageMarks === null) {
-        alert("No data found! Please calculate average first.");
-        return;
-    }
-
-    let grade = calculateGrade(parseFloat(lastStudent.averageMarks));
-
-    document.getElementById("grade-result").innerHTML = `Grade: ${grade}`;
-
-    // Update the stored data
-    lastStudent.grade = grade;
-    students[students.length - 1] = lastStudent;
-    localStorage.setItem("students", JSON.stringify(students));
-}
-
-// Function to calculate grade based on average marks
-function calculateGrade(avg) {
-    if (avg >= 80) return "A";
-    if (avg >= 70) return "B";
-    if (avg >= 60) return "C";
-    if (avg >= 50) return "D";
-    return "F";
+    // Save student data
+    saveStudentRecord({ name, gwa });
 }
 
 // Function to save student record to localStorage
@@ -93,9 +60,7 @@ function displayStudentRecords() {
         let row = `<tr>
             <td>${index + 1}</td>
             <td>${student.name}</td>
-            <td>${student.totalMarks}</td>
-            <td>${student.averageMarks || "N/A"}</td>
-            <td>${student.grade || "N/A"}</td>
+            <td>${student.gwa || "N/A"}</td>
         </tr>`;
         tableBody.innerHTML += row;
     });
