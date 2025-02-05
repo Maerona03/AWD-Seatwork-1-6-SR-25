@@ -134,13 +134,13 @@ button:hover {
 }
 
 h2 {
-    color: #ffffff;
+    color: #000000;
 }
 
 /* Table Section */
 .records-section {
     margin-top: 40px;
-    background-color: #213555;
+    background-color: #99b6e4;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -157,6 +157,10 @@ table th, table td {
     text-align: center;
     border: 1px solid #213555;
     font-family: 'Poppins', sans-serif;
+}
+
+table td{
+
 }
 
 table th {
